@@ -7,8 +7,9 @@ soup = BeautifulSoup(response.text, "html.parser")
 
 result = soup.find_all(class_="now-title")
 
-print(result)
 
-a = {x.select_one("a") for x in result }
 
-print(a)
+a = {x.contents[3] for x in result }
+
+for x in a:
+    print(x.get_text())
