@@ -7,3 +7,4 @@ class ctee_news:
         self.time = time.strptime(year+"/"+time_string, "%Y/%m/%d %H:%M")
         self.url = url
         self.key = time.mktime(self.time)
+
